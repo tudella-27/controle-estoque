@@ -1,0 +1,72 @@
+/* Classes st-key-* vêm das chaves explícitas dos nossos containers.
+   Não usamos classes CSS geradas automaticamente pelo framework. */
+h1 { font-size: 2rem !important; letter-spacing: -0.04em; }
+h2, h3 { letter-spacing: -0.02em; }
+.st-key-entrada_card, .st-key-movimento_card,
+.st-key-kpi_total, .st-key-kpi_disponivel,
+.st-key-kpi_reservado, .st-key-kpi_bloqueado {
+    background: #FFFFFF;
+    box-shadow: 0 3px 12px rgba(0, 11, 64, 0.035);
+}
+.st-key-kpi_total { border-top: 3px solid #000B40 !important; }
+.st-key-kpi_disponivel { border-top: 3px solid #16724A !important; }
+.st-key-kpi_reservado { border-top: 3px solid #7352B8 !important; }
+.st-key-kpi_bloqueado { border-top: 3px solid #A32B3C !important; }
+/* Azul sobre laranja oferece contraste melhor que branco sobre laranja. */
+button[kind="primary"], button[kind="primary"] p {
+    color: #000B40 !important;
+    font-weight: 650;
+}
+button[kind="primary"] { background: #FF6200 !important; border-color: #FF6200 !important; }
+button[kind="primary"]:hover { background: #FF7B29 !important; }
+a { color: #000B40 !important; text-decoration: underline; }
+button:focus-visible, input:focus-visible {
+    outline: 2px solid #000B40 !important;
+    outline-offset: 3px;
+}
+@media (max-width: 640px) {
+    h1 { font-size: 1.6rem !important; }
+}
+
+/* Chaves explícitas dos botões garantem o contraste sem depender de kind. */
+.st-key-acao_entrada button, .st-key-acao_movimento button,
+.st-key-acao_entrada button *, .st-key-acao_movimento button * {
+    color: #ffffff !important;
+}
+.st-key-consulta_card, .st-key-liberacao_card {
+    background: #FFFFFF;
+    box-shadow: 0 3px 12px rgba(0,11,64,0.035);
+}
+.st-key-entrada_card h3, .st-key-movimento_card h3,
+.st-key-consulta_card h3, .st-key-liberacao_card h3 {
+    font-size: 1.3rem;
+}
+button { transition: background-color 150ms ease, box-shadow 150ms ease; }
+.st-key-kpi_total, .st-key-kpi_disponivel,
+.st-key-kpi_reservado, .st-key-kpi_bloqueado {
+    transition: box-shadow 180ms ease;
+}
+.st-key-kpi_total:hover, .st-key-kpi_disponivel:hover,
+.st-key-kpi_reservado:hover, .st-key-kpi_bloqueado:hover {
+    box-shadow: 0 5px 16px rgba(0,11,64,0.09);
+}
+@media (prefers-reduced-motion: reduce) {
+    button, .st-key-kpi_total, .st-key-kpi_disponivel,
+    .st-key-kpi_reservado, .st-key-kpi_bloqueado { transition: none; }
+}
+
+.st-key-seletor_produto_card {
+    background: #FFFFFF;
+    border-left: 5px solid #FF6200 !important;
+    box-shadow: 0 4px 16px rgba(0,11,64,0.06);
+}
+.st-key-seletor_produto_card h3 { font-size: 1.3rem; }
+.consulta-resultado { background: #F5F6FA; border: 1px solid #E2E8F0; border-radius: 10px; padding: 18px; color: #000B40; }
+.consulta-cabecalho { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.consulta-status { font-size: .8rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+.consulta-status.ativo { color: #703000; background: #FFF0E5; }
+.consulta-status.concluido { color: #145A38; background: #E4F3EB; }
+.consulta-grade { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin: 20px 0 0; }
+.consulta-campo dt { color: #4A5570; font-size: .8rem; margin-bottom: 5px; }
+.consulta-campo dd { font-weight: 600; margin: 0; overflow-wrap: anywhere; }
+@media(max-width: 480px) { .consulta-grade { grid-template-columns: 1fr; } }

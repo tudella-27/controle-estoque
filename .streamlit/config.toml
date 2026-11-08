@@ -1,0 +1,13 @@
+[theme]
+base = "light"
+primaryColor = "#FF6200"
+backgroundColor = "#F5F6FA"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#000B40"
+font = "sans serif"
+baseRadius = "0.6rem"
+buttonRadius = "0.4rem"
+borderColor = "#E2E8F0"
+showWidgetBorder = true
+dataframeHeaderBackgroundColor = "#EDF0F7"
+dataframeHeaderTextColor = "#000B40"
